@@ -1,5 +1,12 @@
 <?php
 session_start();
+if(isset($_SESSION['empID'])){
+  if($_SESSION['useRole'] == 'Employee'){
+    header("Location: ./Employee/");
+  }elseif($_SESSION['useRole'] == 'Admin'){
+    header("Location: ./admin/");
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +14,8 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="assets/img/fosconLogo.png" rel="icon">
+    <title>FosconShip</title>
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/logins/login-10/assets/css/login-10.css">
 </head>

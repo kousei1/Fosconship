@@ -39,7 +39,7 @@ class users{
                     switch ($name) {
                         case "Admin":
                             $this->userinfo($username);
-                            header("Location: ./admin/Employee.php");
+                            header("Location: ./admin/");
                             exit(); // Make sure to exit after redirecting
                             break;
                         // Add other cases as needed
